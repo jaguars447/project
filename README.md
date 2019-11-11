@@ -1,4 +1,4 @@
-# groceryplanner
-Online Grocery Planner
+-# angular-8-registration-login-example
 
-Test
+Angular 8 User Registration and Login Example with Webpack 4
+
