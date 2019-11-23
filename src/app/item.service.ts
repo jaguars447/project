@@ -15,6 +15,7 @@ export class ItemListService {
   constructor(servicesCategory:CategoryListService) {
     this.category = servicesCategory.selectedCategory
     this.items = [["1", "Banana", "10"],["4", "Tomatoe", "400"],["7", "Chicken", "1"],["12", "Ice Cream", "5"]]; // the pretend database
+    this.selectedItem = this.items[0]; // figure out how to make this change with the setter method!
   }
 
   getItem(id:string, fields:Array<any> = []) {
