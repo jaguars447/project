@@ -1,6 +1,7 @@
 <h2>{{ category }} list</h2>
+<h1>Select item to view details and add to cart</h1>
 <ul class="itemList">
     <p *ngFor="let item of itemList">
-        <button (click)="selectItem(item[0])">Select</button> Product: {{item[1]}}, Price: {{item[2]}} <br>
+        <button (click)="selectItem(item)" routerLink="/itemdetail" class="btn btn-primary" >Select</button> Product: {{item[1]}}, Price: {{item[2]}} <br>
     </p>
 </ul>

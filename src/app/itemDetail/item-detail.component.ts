@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ItemListService } from '../item.service';
+import { ShoppingCartService } from '@/shoppingcart.service';
 
 @Component({
   selector: 'app-item-detail',
@@ -9,15 +10,11 @@ export class ItemDetailComponent {
 
   item:Array<any>;
 
-  constructor(service: ItemListService) {
-    let itemID = "1"; // Gets item primary key to determine what item to display
-
-    this.item = service.getItem(itemID);
+  constructor(serviceItem: ItemListService) {
+    this.item = serviceItem.selectedItem; // Gets item primary key to determine what item to display
   }
 
-  addToCart(id:string) {
-    // Do whatver code to add item to cart
-    // Probably will need the item's primary key ID
+  addToCart(serviceCart: ShoppingCartService) {
+    serviceCart.addToCart(this.item);
   }
-
 }

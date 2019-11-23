@@ -14,6 +14,11 @@ import { LoginComponent } from './login';
 import { RegisterComponent } from './register';
 import { AlertComponent } from './_components';
 
+//added
+import { CategoryListComponent } from './categoryList/category-list.component';
+ import { ItemListComponent } from './itemList/item-list.component';
+ import { ItemDetailComponent } from './itemDetail/item-detail.component';
+
 @NgModule({
     imports: [
         BrowserModule,
@@ -26,7 +31,12 @@ import { AlertComponent } from './_components';
         HomeComponent,
         LoginComponent,
         RegisterComponent,
-        AlertComponent
+        AlertComponent,
+
+        //added
+        CategoryListComponent,
+        ItemListComponent,
+        ItemDetailComponent,
     ],
     providers: [
         { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
