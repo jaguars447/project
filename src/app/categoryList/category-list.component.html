@@ -3,6 +3,6 @@
  <p> Please select a shoping Category </p>
  <ul class="categoriesArray">
      <p *ngFor="let item of catagoryList">
-         <button (click)="setSelectedCategory(item)" routerLink="/itemlist"class="btn btn-primary">{{ item }}</button><br>
+         <button (click)="newMessage(item)" routerLink="/itemlist"class="btn btn-primary">{{ item }}</button><br>
      </p>
  </ul>

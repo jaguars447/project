@@ -18,6 +18,8 @@ import { AlertComponent } from './_components';
 import { CategoryListComponent } from './categoryList/category-list.component';
  import { ItemListComponent } from './itemList/item-list.component';
  import { ItemDetailComponent } from './itemDetail/item-detail.component';
+import { CategoryListService } from '@/category.service';
+import { ItemListService } from '@/item.service';
 
 @NgModule({
     imports: [
@@ -41,6 +43,10 @@ import { CategoryListComponent } from './categoryList/category-list.component';
     providers: [
         { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
         { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
+
+        CategoryListService,
+        ItemListService,
+    
 
         // provider used to create fake backend
         fakeBackendProvider
